@@ -1,0 +1,175 @@
+.OurStoryContainer {
+    position: relative;
+    height: 800vh;
+    width: 100%;
+
+    .progressBar {
+        z-index: 1;
+        position: fixed;
+        right: 20px;
+        width: 2px;
+        height: 100vh;
+
+        .progressBarFiller {
+
+            background-color: black;
+            height: 1vh;
+            width: 100%;
+        }
+
+        .progressBarHeart {
+            filter: invert(17%) sepia(78%) saturate(7466%) hue-rotate(356deg) brightness(103%) contrast(116%);
+            width: 40px;
+            transform: translateX(-50%) translateX(+1px) translateY(-80%);
+        }
+    }
+
+    .StorySection {
+        height: 100vh;
+
+        // border: solid black 2px;
+        .infoSection {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            //border: solid red 2px;
+            overflow: hidden;
+
+            .infoSectionDate {
+
+                align-self: start;
+                justify-self: start;
+            }
+
+        }
+
+        .section3 {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: center;
+
+            .gridWrapper {
+                height: 100%;
+                max-width: 1200px;
+                display: grid;
+                grid-template: minmax(0, 1fr) minmax(0, 1fr)/minmax(0, 1fr) minmax(0, 1fr);
+                grid-gap: 1em;
+                padding: 1em;
+
+                justify-items: center;
+                justify-content: center;
+                .text {
+                    justify-self: center;
+                    justify-content: center;
+                    justify-items: center;
+                    align-content: center;
+                    align-items: center;
+                    align-self: center;
+
+                    h3 {
+                        font-family: "Montserrat";
+                    }
+
+                    p {
+                        font-family: "Montserrat";
+                    }
+                }
+                .imageWrapper{
+                    width: 100%;
+                    height: 100%;
+                    .image{
+                        border-radius: 5px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(0, 0, 0, 0.6);
+                        transition: all ease .5s;
+    
+                        &:hover {
+                            transform: scale(1.02);
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        .section2 {
+            position: relative;
+
+            // border: solid green 2px;
+            .image2 {
+                border-radius: 5px;
+                top: 52%;
+                right: 48%;
+                width: 48%;
+                position: absolute;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(0, 0, 0, 0.6);
+                transition: all ease .5s;
+
+                &:hover {
+                    top: 51%;
+                }
+            }
+
+            .image3 {
+                border-radius: 5px;
+                right: 2%;
+                bottom: 52%;
+                width: 48%;
+                position: absolute;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(0, 0, 0, 0.6);
+                transition: all ease .5s;
+
+                &:hover {
+                    bottom: 53%;
+                }
+            }
+
+            .textContainer {
+                display: grid;
+                width: 50%;
+            }
+
+            .text {
+                font-size: 15px;
+                justify-self: center;
+                align-self: center;
+                width: 90%;
+            }
+        }
+
+        .StorySectionDate {
+            font-family: "Martel", sans-serif;
+            font-weight: 900;
+            font-size: 30px;
+            margin-left: 25px;
+            position: absolute;
+        }
+    }
+
+    h3 {
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    .OurStoryContainer {
+        .progressBar {
+            right: 35px;
+        }
+
+        .StorySection {
+            .infoSection {
+                .infoSectionDate {}
+            }
+
+            .StorySectionDate {
+                margin-left: 55px;
+            }
+        }
+    }
+
+}

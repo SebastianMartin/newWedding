@@ -1,0 +1,153 @@
+.NavBarContainer {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to top,  rgba(255,255,255,0) 0%, var(--secondary)) no-repeat top center;
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+    z-index: 100;
+    background-color: transparent;
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0px;
+    padding-left: 2%;
+  }
+  .NavBarExtender{
+    height: 30px;;
+  }
+  
+  .NavBarBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .NavBarTitle {
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    font-size: 25px;
+  }
+  
+  .NavBarButtons {
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-self: end;
+    justify-content: end;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .NavBarContainer h2 {
+    animation: none;
+    font-weight: 300;
+    font-size: calc(10px + 2vw);
+    color: var(--purple);
+  }
+  
+  .NavBarButtons a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--purple);
+    display: block;
+    transition: 0.3s;
+  }
+
+
+
+
+  .HeaderSmallContainer {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    z-index: 100;
+    background-color: var(--primary);
+    position: -webkit-sticky;
+    position: sticky;
+    top:0px;
+    border-bottom: solid white 2px;
+
+}
+.HeaderTitle{
+  display: grid;
+    width:100%;
+    color: var(--fontOne);
+    font-size: 20px;
+    
+}
+.HeaderTitleContainer{
+  height: 100%;
+  align-items: center;
+}
+.HeaderTitleContainer h2{
+  transition: none;
+  margin:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--fontOne);
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .HeaderClose {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  .HeaderOpen{
+    color:white;
+      width:60px;
+    font-size: 40px;
+    align-self:center;
+    justify-self: center;
+  }
+  .HeaderOpen, .HeaderClose{
+    cursor: pointer;
+  }
