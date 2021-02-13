@@ -33,8 +33,8 @@ const NavBar = (props) => {
             text: "1"
         },
         {
-            value: "2",
-            text: "2"
+            value: "ourStory",
+            text: "Our Story"
         },
         {
             value: "3",

@@ -4,8 +4,8 @@ import './OurStory.css';
 import { NavHashLink } from 'react-router-hash-link';
 import { HashLink as Link } from 'react-router-hash-link';
 import heart from './heart.png'
-import img2015_1 from './Images/2015_1.jpg'
-import img2015_3 from './Images/2015_3.jpg'
+import img2015_1 from './Images/2015_1(2).jpg'
+import img2015_3 from './Images/2015_3(1).jpg'
 import { gsap, ScrollTrigger, TweenLite, TweenMax, TimelineLite } from "gsap/all";
 
 
@@ -17,10 +17,9 @@ const NavBar = (props) => {
     const containerRef = useRef(null)
     const ref2014 = useRef(null)
     const ref2015Picture1 = useRef(null)
+    const ref2015Picture1Text = useRef(null)
     const ref2015Picture2 = useRef(null)
-    const ref2015Picture3 = useRef(null)
-    const ref2015Picture4 = useRef(null)
-    const ref2015Text = useRef(null)
+    const ref2015Picture2Text = useRef(null)
 
 
 
@@ -37,29 +36,37 @@ const NavBar = (props) => {
 
     let [scroll, setScroll] = useState(scrollFunction());
     const section2015 = () => {
+        gsap.from(ref2015Picture1.current, {
+            opacity: "0%",
+            scrollTrigger: {
+                trigger: ref2015Picture1.current, start: "top bottom", end: "bottom bottom",
+                markers: true
+            }
+        }
+        ,2
+        )
         gsap.from(ref2015Picture2.current, {
-            width: "0%",
-            y: "200%",
+            opacity: "0%",
+            ease: "ease",
             scrollTrigger: {
-                trigger: ".sec2", start: "top bottom", end: "bottom bottom",
-                scrub: true, markers: false
+                trigger: ref2015Picture2.current, start: "top bottom", end: "bottom bottom",
+                markers: false
             }
-        })
-        gsap.from(ref2015Picture3.current, {
-            width: "0%",
-            y: "200%",
+        },2)
+        gsap.from(ref2015Picture1Text.current, {
+            x: "-200%",
             scrollTrigger: {
-                trigger: ".sec2", start: "top bottom",
-                end: "bottom bottom", scrub: true, markers: false
+                trigger: ref2015Picture1Text.current, start: "top 75%", end: "bottom bottom",
+                markers: false
             }
-        })
-        gsap.from(ref2015Text.current, {
-            y: "50%",
+        },2)
+        gsap.from(ref2015Picture2Text.current, {
+            x: "200%",
             scrollTrigger: {
-                trigger: ".sec2", start: "top bottom"
-                , end: "bottom 25%", scrub: true, markers: false
+                trigger: ref2015Picture2Text.current, start: "top 75%", end: "bottom bottom",
+                markers: false
             }
-        })
+        },2)
     }
     const DatePinning = () => {
         TweenMax.to(ref2014.current, {
@@ -126,40 +133,64 @@ const NavBar = (props) => {
             </div> */}
             <div className="StorySection sec1">
                 <div className="StorySectionDate "><h2 ref={ref2014} >2014</h2></div>
-
-            </div>
-            <div className="StorySection sec2">
-                <div className="StorySectionDate "><h2 ref={ref2015}>2015</h2></div>
-                {/* <div className="infoSection section2">
-                    <img className="image2" src={img2015_1} ref={ref2015Picture2}></img>
-                    <img className="image3" src={img2015_3} ref={ref2015Picture3}></img>
-                    <div className="textContainer">
-
-                    </div>
-
-                </div> */}
-            </div>
-            <div className="StorySection sec3">
-                <div className="StorySectionDate "><h2 ref={ref2016}>2016</h2></div>
-                <div className="section3">
+                <div className="section2">
                     <div className="gridWrapper"
                     >
                         <div className="text">
-                            <h3>Prom</h3>
-                            <p>We</p>
+                            <div className="textInside">
+                                <h3>Prom</h3>
+                                <p>We</p>
+                            </div>
                         </div>
                         <div className="imageWrapper">
                             <img className="image" src={img2015_1}></img>
+                            <div className="filter" />
                         </div>
                         <div className="imageWrapper">
                             <img className="image" src={img2015_3}></img>
                         </div>
 
-                        <div>
-                            p
+                        <div className="text">
+                            <div className="textInside">
+                                <h3>Prom</h3>
+                                <p>We</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="StorySection sec2">
+                <div className="StorySectionDate "><h2 ref={ref2015}>2015</h2></div>
+                <div className="section2">
+                    <div className="gridWrapper"
+                    >
+                        <div className="text" ref={ref2015Picture1Text}>
+                            <div className="textInside">
+                                <h3>Prom</h3>
+                                <p>We</p>
+                            </div>
+                        </div>
+                        <div className="imageWrapper">
+                            <img className="image" src={img2015_1} ref={ref2015Picture1}></img>
+                            {/* <div className="filter"/> */}
+                        </div>
+                        <div className="imageWrapper">
+                            <img className="image" src={img2015_3} ref={ref2015Picture2}></img>
+                        </div>
+
+                        <div className="text" ref={ref2015Picture2Text}>
+                            <div className="textInside">
+                                <h3>Prom</h3>
+                                <p>We</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="StorySection sec3">
+                <div className="StorySectionDate "><h2 ref={ref2016}>2016</h2></div>
+
             </div>
             <div className="StorySection sec4">
                 <div className="StorySectionDate "><h2 ref={ref2017}>2017</h2></div>

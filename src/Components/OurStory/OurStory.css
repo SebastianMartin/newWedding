@@ -1,7 +1,7 @@
 .OurStoryContainer {
   position: relative;
-  height: 800vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .OurStoryContainer .progressBar {
@@ -26,10 +26,6 @@
           transform: translateX(-50%) translateX(1px) translateY(-80%);
 }
 
-.OurStoryContainer .StorySection {
-  height: 100vh;
-}
-
 .OurStoryContainer .StorySection .infoSection {
   display: -ms-grid;
   display: grid;
@@ -46,7 +42,7 @@
       justify-self: start;
 }
 
-.OurStoryContainer .StorySection .section3 {
+.OurStoryContainer .StorySection .section2 {
   width: 100%;
   height: 100%;
   display: -ms-grid;
@@ -56,9 +52,9 @@
           justify-content: center;
 }
 
-.OurStoryContainer .StorySection .section3 .gridWrapper {
+.OurStoryContainer .StorySection .section2 .gridWrapper {
   height: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: minmax(0, 1fr) minmax(0, 1fr);
@@ -72,37 +68,32 @@
           justify-content: center;
 }
 
-.OurStoryContainer .StorySection .section3 .gridWrapper .text {
-  -ms-grid-column-align: center;
-      justify-self: center;
+.OurStoryContainer .StorySection .section2 .gridWrapper .text {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  justify-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
-.OurStoryContainer .StorySection .section3 .gridWrapper .text h3 {
+.OurStoryContainer .StorySection .section2 .gridWrapper .text .textInside h3 {
   font-family: "Montserrat";
 }
 
-.OurStoryContainer .StorySection .section3 .gridWrapper .text p {
+.OurStoryContainer .StorySection .section2 .gridWrapper .text .textInside p {
   font-family: "Montserrat";
 }
 
-.OurStoryContainer .StorySection .section3 .gridWrapper .imageWrapper {
+.OurStoryContainer .StorySection .section2 .gridWrapper .imageWrapper {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
-.OurStoryContainer .StorySection .section3 .gridWrapper .imageWrapper .image {
+.OurStoryContainer .StorySection .section2 .gridWrapper .imageWrapper .image {
   border-radius: 5px;
   width: 100%;
   height: 100%;
@@ -114,69 +105,29 @@
   transition: all ease .5s;
 }
 
-.OurStoryContainer .StorySection .section3 .gridWrapper .imageWrapper .image:hover {
+.OurStoryContainer .StorySection .section2 .gridWrapper .imageWrapper .image:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
-.OurStoryContainer .StorySection .section2 {
-  position: relative;
-}
-
-.OurStoryContainer .StorySection .section2 .image2 {
-  border-radius: 5px;
-  top: 52%;
-  right: 48%;
-  width: 48%;
+.OurStoryContainer .StorySection .section2 .gridWrapper .imageWrapper .filter {
   position: absolute;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(0, 0, 0, 0.6);
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
-}
-
-.OurStoryContainer .StorySection .section2 .image2:hover {
-  top: 51%;
-}
-
-.OurStoryContainer .StorySection .section2 .image3 {
-  border-radius: 5px;
-  right: 2%;
-  bottom: 52%;
-  width: 48%;
-  position: absolute;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(0, 0, 0, 0.6);
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
-}
-
-.OurStoryContainer .StorySection .section2 .image3:hover {
-  bottom: 53%;
-}
-
-.OurStoryContainer .StorySection .section2 .textContainer {
-  display: -ms-grid;
-  display: grid;
-  width: 50%;
-}
-
-.OurStoryContainer .StorySection .section2 .text {
-  font-size: 15px;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 90%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .OurStoryContainer .StorySection .StorySectionDate {
+  z-index: 2;
   font-family: "Martel", sans-serif;
   font-weight: 900;
-  font-size: 30px;
   margin-left: 25px;
   position: absolute;
+}
+
+.OurStoryContainer .StorySection .StorySectionDate h2 {
+  font-size: 60px;
 }
 
 .OurStoryContainer h3 {
