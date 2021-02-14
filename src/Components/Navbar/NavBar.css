@@ -1,5 +1,6 @@
 .NavBarContainer {
     font-family: "Montserrat", sans-serif;
+    font-weight: 300;
     background: linear-gradient(to top,  rgba(255,255,255,0) 0%, var(--secondary)) no-repeat top center;
     
     width: 100%;

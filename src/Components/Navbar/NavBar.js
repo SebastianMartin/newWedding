@@ -55,7 +55,7 @@ const NavBar = (props) => {
                     <div  className="HeaderTitleContainer">
 
                         <h2>
-                        Title
+                        Sebastian + Gabrielle
                      </h2>
                     </div>
                 </Link>
@@ -88,7 +88,7 @@ const NavBar = (props) => {
                     to={"/#home"}
                 >
                     <h2>
-                    Title
+                    Sebastian + Gabrielle
             </h2>
                 </Link>
                 <div className="NavBarButtons">

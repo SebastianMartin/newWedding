@@ -8,13 +8,18 @@
   box-sizing: border-box;
 }
 :root {
+  --green: #185645;
+  --purple: #452940;
+  --gold: #AB743B;
+  --blue: #1A2237;
+  --red: #561625;
   --tablet: 1200;
   --phone: 500;
-  --max :1200;
-  --primary: grey  ;
+  --primary: #452940;
   --secondary: whitesmoke;
+  /* --secondary: #FBEAB2; */
   --fontOne: #FFFFFF;
-  --fontTwo: black;
+  --fontTwo: #AB743B;
 }
 
 

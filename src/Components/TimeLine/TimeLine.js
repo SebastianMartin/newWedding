@@ -39,7 +39,8 @@ const TimeLine = (props) => {
                 start: "top -25%",
                 end: "+=80%",
                 markers: false,
-                scrub: true
+                scrub: true,
+                anticipatePin: 1
             }
         })
         // if(sectionID !== "#sec0"){
