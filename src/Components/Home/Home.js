@@ -10,10 +10,33 @@ import topImage from './Images/eng1_retrofilt.jpg'
 import secondPicture from './Images/engagementPic2.jpg'
 import ringRail from './Images/Ring_rail.jpg'
 import holding from './Images/Holding_me.jpg'
-import hands from './Images/holding_hands.jpg'
+import handss from './Images/holding_hands.jpg'
+
+import greece from './Images/greece.jpg'
+import usc from './Images/usc.jpg'
+import bastei1 from './Images/bastei1.jpg'
+//import bastei from './Images/bastei.jpg'
+import beer from './Images/beer.jpg'
+import grad from './Images/grad.jpg'
+import river from './Images/river.jpg'
+import cruise from './Images/cruise.jpg'
+//import nawlin from './Images/Nawlin.jpg'
+import prom from './Images/prom.jpg'
+import hands from './Images/hands.jpg'
+import holding_hands from './Images/holding_hands.jpg'
+import EngagementPic3 from './Images/EngagementPic3.jpg'
+import Holding_me from './Images/Holding_me.jpg'
+import spin from './Images/spin.jpg'
+import Ring_rail from './Images/Ring_rail.jpg'
+
+
+
+
+
 const Home = (props) => {
+    const galleryRef = useRef(null)
     gsap.registerPlugin(ScrollTrigger);
-    const topSectionAnimation = () =>{
+    const topSectionAnimation = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".background2",
@@ -21,7 +44,7 @@ const Home = (props) => {
                 start: "top top",
                 end: "bottom top",
                 scrub: true,
-                markers: true
+                //markers: true
             }
         });
 
@@ -35,12 +58,50 @@ const Home = (props) => {
         //     tl.to(layer, { y: movement, ease: "none" }, 0)
         // });
     }
-    const infoSectionAnimation =() =>{
-        
+    const infoSectionAnimation = () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".infoGrid",
+                start: "top center",
+                //markers: true
+            }
+        });
+
+        let layers = []
+        gsap.utils.toArray(".gridsec").forEach(layer => {
+            layers.push(layer)
+
+            //tl.from(layer, {  }, 0)
+        });
+        tl.staggerFrom(layers, .5, { transform: "rotateY(90deg)" }, .2)
     }
     useEffect(() => {
         topSectionAnimation()
         infoSectionAnimation()
+
+
+
+        setTimeout(function () { 
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".GallerySectionOutside",
+                    start: "top top",
+                    end: "bottom center",
+                    scrub: 1,
+                    markers: true,
+                    pin: true
+                }
+            });
+            tl.to(".GallerySectionWrapper",
+                {
+                    x: -1 * (document.querySelector(".GallerySectionWrapper").scrollWidth
+                        -
+                        document.querySelector(".galleryGridWrapper").offsetWidth)
+                })
+
+        }, 300);
+
+
 
     }, [])
 
@@ -88,7 +149,7 @@ const Home = (props) => {
                             </div>
                         </div>
                         <div className="gridsec">
-                            <img className="image" src={hands} />
+                            <img className="image" src={handss} />
                         </div>
                         <div className="gridsec">
                             <img className="image" src={ringRail} />
@@ -124,6 +185,50 @@ const Home = (props) => {
                     </div>
 
                 </div>
+            </div>
+            <div className="GallerySectionOutside" ref={galleryRef}>
+                <div className="galleryGridWrapper" >
+                    <div className="GallerySectionWrapper gallery" ref={galleryRef}>
+
+
+
+                        <div className="galleryImage">
+                             <img className="image" src={greece} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={usc} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={bastei1} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={beer} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={grad} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={river} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={cruise} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={prom} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={hands} />
+                        </div>
+                        <div className="galleryImage">
+                            <img className="image" src={holding_hands} />
+                        </div> 
+
+                    </div>
+                </div>
+
+            </div>
+            <div className="RSVPSectionOutside">
+
             </div>
 
 

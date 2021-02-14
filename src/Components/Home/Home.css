@@ -2,8 +2,8 @@
   position: relative;
   width: 100%;
   min-height: 250vh;
-  overflow: hidden;
   background-color: #efeffc;
+  overflow: hidden;
 }
 
 .HomeContainer .topSectionOutside {
@@ -202,5 +202,74 @@
 
 .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridsec .infoCard .cardInfo p span {
   display: block;
+}
+
+.HomeContainer .GallerySectionOutside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  min-height: 300vh;
+}
+
+.HomeContainer .GallerySectionOutside .galleryGridWrapper {
+  width: auto;
+  margin-top: 25vh;
+  width: 100%;
+}
+
+.HomeContainer .GallerySectionOutside .galleryGridWrapper .GallerySectionWrapper {
+  left: 0px;
+  height: 50vh;
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 1em;
+  padding-left: 1em;
+  margin-right: 1em;
+}
+
+.HomeContainer .GallerySectionOutside .galleryGridWrapper .GallerySectionWrapper .galleryImage {
+  height: 50vh;
+}
+
+.HomeContainer .GallerySectionOutside .galleryGridWrapper .GallerySectionWrapper .galleryImage .image {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.HomeContainer .RSVPSectionOutside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  border: solid black 2px;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper {
+  height: 100vh;
+  width: 100%;
+  max-width: 1600px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  position: relative;
 }
 /*# sourceMappingURL=Home.css.map */
