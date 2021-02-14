@@ -34,7 +34,6 @@ import Ring_rail from './Images/Ring_rail.jpg'
 
 
 const Home = (props) => {
-    const galleryRef = useRef(null)
     gsap.registerPlugin(ScrollTrigger);
     const topSectionAnimation = () => {
         const tl = gsap.timeline({
@@ -62,7 +61,7 @@ const Home = (props) => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".infoGrid",
-                start: "top center",
+                start: "top 75%",
                 //markers: true
             }
         });
@@ -81,17 +80,18 @@ const Home = (props) => {
 
 
 
-        setTimeout(function () { 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".GallerySectionOutside",
-                    start: "top top",
-                    end: "bottom center",
-                    scrub: 1,
-                    markers: true,
-                    pin: true
-                }
-            });
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".GallerySectionOutside",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1,
+                //markers: true,
+                pin: ".GallerySectionWrapper"
+            }
+        });
+        setTimeout(function () {
             tl.to(".GallerySectionWrapper",
                 {
                     x: -1 * (document.querySelector(".GallerySectionWrapper").scrollWidth
@@ -186,14 +186,53 @@ const Home = (props) => {
 
                 </div>
             </div>
-            <div className="GallerySectionOutside" ref={galleryRef}>
+            <div className="RSVPSectionOutside" id="rsvp">
+                <div className="RSVPSectionWrapper">
+                    <h2>
+                        RSVP
+                    </h2>
+                    <p>
+                        Our wedding has a limited guest list due to our venue size and location.
+
+    Therefore, only RSVP yourself and those listed on your invitation.
+
+    Thank you for understanding.
+                    </p>
+                    <p style={{ textDecoration: "underline" }}>
+
+                        Please submit the form below for each invited guest.
+                    </p>
+
+                    <div className="RSVPcard">
+                        <input>
+                        </input>
+                        <input>
+                        </input>
+                        <button>
+                            Ye
+                    </button>
+                        <button>
+                            no
+                    </button>
+                    <textarea>
+                        
+                    </textarea>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div className="GallerySectionOutside" id="gallery">
                 <div className="galleryGridWrapper" >
-                    <div className="GallerySectionWrapper gallery" ref={galleryRef}>
+                    <div className="GallerySectionWrapper gallery" >
 
 
 
                         <div className="galleryImage">
-                             <img className="image" src={greece} />
+                            <img className="image" src={greece} />
                         </div>
                         <div className="galleryImage">
                             <img className="image" src={usc} />
@@ -221,15 +260,13 @@ const Home = (props) => {
                         </div>
                         <div className="galleryImage">
                             <img className="image" src={holding_hands} />
-                        </div> 
+                        </div>
 
                     </div>
                 </div>
 
             </div>
-            <div className="RSVPSectionOutside">
 
-            </div>
 
 
         </div>

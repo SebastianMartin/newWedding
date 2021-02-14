@@ -6,10 +6,10 @@ import Home from './Components/Home/Home'
 import NavBar from './Components/Navbar/NavBar'
 import OurStory from './Components/OurStory/OurStory'
 import TimeLine from './Components/TimeLine/TimeLine'
-import PTest from './Components/PasrallaxTest/PTest'
+//import PTest from './Components/PasrallaxTest/PTest'
 
 
-import { BrowserRouter, Link, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter,Router, Link, Switch, Route, Redirect,HashRouter } from 'react-router-dom'
 const App = (props) => {
 	return (
 		<BrowserRouter>
@@ -17,7 +17,6 @@ const App = (props) => {
 				<NavBar/>
 				<Route path="/home" component={Home}></Route>
 				<Route path="/ourstory" component={TimeLine}></Route>
-				<Route path="/1" component={PTest}></Route>
 				<Route exact path="/">
 					<Redirect to="/home" />
 				</Route>

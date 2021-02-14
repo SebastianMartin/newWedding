@@ -1,3 +1,12 @@
+
+$heroHeight: 800px;
+
+
+#hero {
+	height: $heroHeight;
+	overflow: hidden;
+	position: relative;
+}
 .HomeContainer {
     position: relative;
     width: 100%;
@@ -152,7 +161,7 @@
                                 font-size: 50px;
                                 padding: 0;
                                 margin-bottom: 0;
-                                font-family: 'Montserrat', sans-serif;
+                                font-family: 'Playfair Display', sans-serif;
                                 border-bottom: 2px solid var(--gold);
                             }
 
@@ -176,7 +185,7 @@
         display: flex;
         justify-content: center;
         position: relative;
-        min-height: 300vh;
+        height: 300vh;
         
 
         .galleryGridWrapper {
@@ -214,18 +223,29 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        min-height: 100vh;
+        min-height: 80vh;
         width: 100%;
         border: solid black 2px;
 
         .RSVPSectionWrapper {
-            height: 100vh;
-            width: 100%;
-            max-width: 1600px;
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            position: relative;
+            height: 60vh;
+            width: 80%;
+            border: solid black 2px;
+            h2{
+                font-size: 50px;
+                padding: 0;
+                margin-bottom: 0;
+                font-family: 'Playfair Display', sans-serif;
+                border-bottom: 2px solid var(--gold);
+            }
+            p{
+                width: 90%;
+                padding-left: 10%;;
+                margin:0;
+                line-height: 2em;
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+            }
         }
     }
 

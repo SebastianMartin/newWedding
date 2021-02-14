@@ -29,20 +29,16 @@ const NavBar = (props) => {
         },
 
         {
-            value: "1",
-            text: "1"
+            value: "info",
+            text: "Information"
         },
         {
-            value: "ourStory",
-            text: "Our Story"
+            value: "rsvp",
+            text: "RSVP"
         },
         {
-            value: "3",
-            text: "3"
-        },
-        {
-            value: "4",
-            text: "4"
+            value: "gallery",
+            text: "Gallery"
         },
     ]
 
@@ -52,10 +48,10 @@ const NavBar = (props) => {
             <div className="HeaderSmallContainer">
                 <span className="HeaderOpen" onClick={() => { expansion.current.style.width = "100%" }}>&#9776;</span>
                 <Link className="HeaderTitle" to={"/home"} style={{ textDecoration: "none" }}>
-                    <div  className="HeaderTitleContainer">
+                    <div className="HeaderTitleContainer">
 
                         <h2>
-                        Sebastian + Gabrielle
+                            Sebastian + Gabrielle
                      </h2>
                     </div>
                 </Link>
@@ -88,17 +84,27 @@ const NavBar = (props) => {
                     to={"/#home"}
                 >
                     <h2>
-                    Sebastian + Gabrielle
+                        Sebastian + Gabrielle
             </h2>
                 </Link>
                 <div className="NavBarButtons">
                     {hdrValues.map((value) => (
-                        <a href={"/" + value.value}
+                        <Link
+                            to={{
+                                pathname: "home",
+                                hash: value.value,
+                                state: { fromDashboard: true }
+                            }}
                             onClick={() => { console.log("peen") }}
                             value={value.value}>
                             {value.text}
-                        </a>
+                        </Link>
                     ))}
+                    <a href={"/ourstory"}
+                        onClick={() => { console.log("peen") }}
+                    >
+                        Our Story
+                        </a>
                 </div>
                 <div className="NavBarExtender">
 
