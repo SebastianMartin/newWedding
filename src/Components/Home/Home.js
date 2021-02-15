@@ -34,6 +34,19 @@ import Ring_rail from './Images/Ring_rail.jpg'
 
 
 const Home = (props) => {
+    const getWidth = () => window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+    let [width, setWidth] = useState(getWidth());
+
+    useEffect(() => {
+        const resizeListener = () => {
+            setWidth(getWidth())
+        };
+        window.addEventListener('resize', resizeListener);
+
+    }, [])
+    const isMobile = (width <= 700);
     gsap.registerPlugin(ScrollTrigger);
     const topSectionAnimation = () => {
         const tl = gsap.timeline({
@@ -51,6 +64,20 @@ const Home = (props) => {
         tl.to(".background2", { x: "60%", opacity: "0", ease: "none" }, 0)
         tl.to("#topImage", { opacity: "0", ease: "none" }, 0)
         tl.to("#topText", { opacity: "0", ease: "none" }, 0)
+
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".topSectionOutside",
+                toggleActions:"restart",
+                endTrigger: ".topSectionOutside",
+                start: "top -10%",
+                end: "bottom 50%",
+                //markers: true
+            }
+        });
+        tl2.fromTo("#topSectionBottomBar",1.5, { x:"-100%", ease: "none" },{ x:"100%", ease: "none" }, 0)
+        tl2.fromTo("#topSectionBottomBar1",1.5, { x:"-130%", ease: "none" },{ x:"100%", ease: "none" }, 0)
+        tl2.fromTo("#topSectionBottomBar2",1.5,{ x:"-160%", ease: "none" },{ x:"100%", ease: "none" }, 0)
         // gsap.utils.toArray(".parallax").forEach(layer => {
         //     const depth = layer.dataset.depth;
         //     const movement = -(layer.offsetHeight *depth )
@@ -60,6 +87,7 @@ const Home = (props) => {
     const infoSectionAnimation = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
+                
                 trigger: ".infoGrid",
                 start: "top 75%",
                 //markers: true
@@ -72,7 +100,7 @@ const Home = (props) => {
 
             //tl.from(layer, {  }, 0)
         });
-        tl.staggerFrom(layers, .5, { transform: "rotateY(90deg)" }, .2)
+        tl.staggerFrom(layers, .7, { transform: "rotateY(90deg)" }, .3)
     }
     useEffect(() => {
         topSectionAnimation()
@@ -124,7 +152,7 @@ const Home = (props) => {
                     </div>
                     <div className="imageWrapper" ><img className="image" src={topImage} id="topImage" /></div>
                     <div className="textWrapper" id="topText">
-                        <h2>Meet us in the Mountains for the Marriage of:</h2>
+                        <h2>Meet us in the Mountains for the Marriage of</h2>
                         <br />
                         <h1>Sebastian</h1>
                         <h1>+</h1>
@@ -132,65 +160,125 @@ const Home = (props) => {
                         <br />
                         <p>September 18, 2021</p>
                     </div>
+
                 </div>
+                <div className="bottomBar" id="topSectionBottomBar"/>
+                <div className="bottomBar p" id="topSectionBottomBar1"/>
+                <div className="bottomBar g" id="topSectionBottomBar2"/>
             </div>
             <div className="InfoSectionOutside">
                 <div className="InfoSectionWrapper" id="info">
-                    <div className="infoGrid">
-                        <div className="gridsec">
-                            <div className="infoCard">
-                                <div className="cardInfo">
-                                    <h3>
-                                        Where:
+                    {!isMobile ?
+                        <div className="infoGrid">
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <div className="infoCard">
+                                        <div className="cardInfo">
+                                            <h3>
+                                                Where:
                                 </h3>
-                                    <p>3309 Lonesome Pine Way Sevierville, TN 37862</p>
-                                </div>
+                                            <p>3309 Lonesome Pine Way Sevierville, TN 37862</p>
+                                        </div>
 
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="gridsec">
-                            <img className="image" src={handss} />
-                        </div>
-                        <div className="gridsec">
-                            <img className="image" src={ringRail} />
-                        </div>
-                        <div className="gridsec">
-                            <div className="infoCard">
-                                <div className="cardInfo">
-                                    <h3>
-                                        When:
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <img className="image" src={handss} />
+                                </div>
+                            </div>
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <img className="image" src={ringRail} />
+                                </div>
+                            </div>
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <div className="infoCard">
+                                        <div className="cardInfo">
+                                            <h3>
+                                                When:
                                 </h3>
-                                    <p>September 18, 2021
+                                            <p>September 18, 2021
 
                                     <span>4:00 - 11:00 PM</span></p>
-                                </div>
+                                        </div>
 
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="gridsec">
-                            <div className="infoCard">
-                                <div className="cardInfo">
-                                    <h3>
-                                        Wear:
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <div className="infoCard">
+                                        <div className="cardInfo">
+                                            <h3>
+                                                Wear:
                                 </h3>
-                                    <p>Semi-Formal + comfortable shoes</p>
-                                </div>
+                                            <p>Semi-Formal + comfortable shoes</p>
+                                        </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <img className="image" src={holding} />
+                                </div>
                             </div>
                         </div>
-                        <div className="gridsec">
-                            <img className="image" src={holding} />
-                        </div>
+                        :
+                        <div className="infoGrid">
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <div className="infoCard">
+                                        <div className="cardInfo">
+                                            <h3>
+                                                Where:
+                                </h3>
+                                            <p>3309 Lonesome Pine Way Sevierville, TN 37862</p>
+                                        </div>
 
-                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <div className="infoCard">
+                                        <div className="cardInfo">
+                                            <h3>
+                                                When:
+                                </h3>
+                                            <p>September 18, 2021
+
+                                    <span>4:00 - 11:00 PM</span></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="gridSecWrapper">
+                                <div className="gridsec">
+                                    <div className="infoCard">
+                                        <div className="cardInfo">
+                                            <h3>
+                                                Wear:
+                                </h3>
+                                            <p>Semi-Formal + comfortable shoes</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>}
 
                 </div>
             </div>
             <div className="RSVPSectionOutside" id="rsvp">
                 <div className="RSVPSectionWrapper">
-                    <h2>
+                    <h3>
                         RSVP
-                    </h2>
+                    </h3>
                     <p>
                         Our wedding has a limited guest list due to our venue size and location.
 
@@ -214,9 +302,9 @@ const Home = (props) => {
                         <button>
                             no
                     </button>
-                    <textarea>
-                        
-                    </textarea>
+                        <textarea>
+
+                        </textarea>
 
                     </div>
 

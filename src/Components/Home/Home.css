@@ -8,12 +8,12 @@
   position: relative;
   width: 100%;
   min-height: 250vh;
-  background-color: #efeffc;
+  background-color: rgba(69, 41, 64, 0.1);
   overflow: hidden;
 }
 
 .HomeContainer .topSectionOutside {
-  min-height: 100vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,8 +55,8 @@
 .HomeContainer .topSectionOutside .topSectionWrapper .background1 {
   background-color: rgba(69, 41, 64, 0.7);
   position: absolute;
-  margin-left: -12%;
-  margin-top: 2%;
+  margin-left: -14%;
+  margin-top: 4%;
   width: 60%;
   height: 50%;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -66,8 +66,8 @@
 .HomeContainer .topSectionOutside .topSectionWrapper .background2 {
   background-color: rgba(24, 86, 69, 0.7);
   position: absolute;
-  margin-left: -8%;
-  margin-top: -2%;
+  margin-left: -6%;
+  margin-top: -4%;
   width: 60%;
   height: 50%;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -77,7 +77,7 @@
 .HomeContainer .topSectionOutside .topSectionWrapper .imageWrapper {
   z-index: 2;
   position: absolute;
-  margin-left: 20%;
+  margin-left: 50%;
   width: 35%;
   height: 35%;
 }
@@ -94,9 +94,9 @@
 .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper {
   z-index: 2;
   position: absolute;
-  margin-left: -20%;
   width: 35%;
   height: 40%;
+  margin-left: -27.5%;
 }
 
 .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper h2 {
@@ -106,7 +106,6 @@
 }
 
 .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper h1 {
-  font-size: 50px;
   padding: 0;
   margin: 0;
   font-family: 'Playfair Display', sans-serif;
@@ -114,6 +113,24 @@
 
 .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper p {
   font-family: 'Montserrat', sans-serif;
+}
+
+.HomeContainer .topSectionOutside .bottomBar {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(171, 116, 59, 0.5);
+}
+
+.HomeContainer .topSectionOutside .p {
+  bottom: 16%;
+  background-color: rgba(24, 86, 69, 0.5);
+}
+
+.HomeContainer .topSectionOutside .g {
+  bottom: 14%;
+  background-color: rgba(69, 41, 64, 0.5);
 }
 
 .HomeContainer .InfoSectionOutside {
@@ -130,7 +147,6 @@
 }
 
 .HomeContainer .InfoSectionOutside .InfoSectionWrapper {
-  height: 100vh;
   width: 100%;
   max-width: 1600px;
   display: -ms-grid;
@@ -144,7 +160,6 @@
 
 .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid {
   width: 80%;
-  height: 80vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[2];
@@ -155,30 +170,41 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 10%;
 }
 
-.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridsec {
-  width: 100%;
-  height: 100%;
+.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper {
+  padding-top: 60%;
+  max-width: 100%;
+  position: relative;
+}
+
+.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   -webkit-box-shadow: 0 5px 5px rgba(69, 41, 64, 0.7), 0px 0px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(69, 41, 64, 0.7), 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridsec .image {
+.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridsec .infoCard {
+.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .infoCard {
   width: 100%;
   height: 100%;
   display: -ms-grid;
   display: grid;
 }
 
-.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridsec .infoCard .cardInfo {
+.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .infoCard .cardInfo {
   height: 80%;
   width: 80%;
   -ms-grid-column-align: center;
@@ -194,19 +220,14 @@
           align-items: center;
 }
 
-.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridsec .infoCard .cardInfo h3 {
-  font-size: 50px;
+.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .infoCard .cardInfo h3 {
   padding: 0;
   margin-bottom: 0;
   font-family: 'Playfair Display', sans-serif;
   border-bottom: 2px solid var(--gold);
 }
 
-.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridsec .infoCard .cardInfo p {
-  font-size: 20px;
-}
-
-.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridsec .infoCard .cardInfo p span {
+.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .infoCard .cardInfo p span {
   display: block;
 }
 
@@ -263,17 +284,14 @@
   position: relative;
   min-height: 80vh;
   width: 100%;
-  border: solid black 2px;
 }
 
 .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper {
   height: 60vh;
   width: 80%;
-  border: solid black 2px;
 }
 
-.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper h2 {
-  font-size: 50px;
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper h3 {
   padding: 0;
   margin-bottom: 0;
   font-family: 'Playfair Display', sans-serif;
@@ -285,7 +303,74 @@
   padding-left: 10%;
   margin: 0;
   line-height: 2em;
-  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (max-width: 700px) {
+  .HomeContainer {
+    position: relative;
+    width: 100%;
+    min-height: 250vh;
+    background-color: rgba(69, 41, 64, 0.1);
+    overflow: hidden;
+  }
+  .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid {
+    width: 80%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    -ms-grid-rows: (minmax(0, 1fr))[3];
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-gap: 2em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper {
+    padding-top: 50%;
+    max-width: 100%;
+    position: relative;
+  }
+  .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-box-shadow: 0 5px 5px rgba(69, 41, 64, 0.7), 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 5px rgba(69, 41, 64, 0.7), 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .image {
+    display: none;
+  }
+  .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .infoCard {
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+  }
+  .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .infoCard .cardInfo {
+    height: 80%;
+    width: 80%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (minmax(0, 1fr))[2];
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .infoCard .cardInfo h3 {
+    padding: 0;
+    margin-bottom: 0;
+    font-family: 'Playfair Display', sans-serif;
+    border-bottom: 2px solid var(--gold);
+  }
 }
 /*# sourceMappingURL=Home.css.map */

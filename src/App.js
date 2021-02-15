@@ -14,7 +14,7 @@ const App = (props) => {
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<NavBar/>
+				{/* <NavBar/> */}
 				<Route path="/home" component={Home}></Route>
 				<Route path="/ourstory" component={TimeLine}></Route>
 				<Route exact path="/">
