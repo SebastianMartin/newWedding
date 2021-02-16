@@ -16,7 +16,7 @@
     padding-left: 2%;
   }
   .NavBarExtender{
-    height: 30px;;
+    height: 0px;;
   }
   
   .NavBarBackground {
@@ -68,17 +68,18 @@
     display: flex;
     justify-items: center;
     align-items: center;
+    position: fixed;
     z-index: 100;
-    background-color: var(--primary);
-    position: -webkit-sticky;
+    background: linear-gradient(to top,  rgba(255,255,255,0) 0%, var(--secondary)) no-repeat top center;
+
     top:0px;
-    border-bottom: solid white 2px;
+    color: var(--purple);
 
 }
 .HeaderTitle{
   display: grid;
     width:100%;
-    color: var(--fontOne);
+    color: var(--purple);
     font-size: 20px;
     
 }
@@ -132,7 +133,7 @@
   }
   
   .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: var(--purple);
   }
   
   .overlay .HeaderClose {
@@ -142,7 +143,7 @@
     font-size: 60px;
   }
   .HeaderOpen{
-    color:white;
+    color: var(--purple);
       width:60px;
     font-size: 40px;
     align-self:center;

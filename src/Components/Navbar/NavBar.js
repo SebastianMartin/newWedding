@@ -59,7 +59,11 @@ const NavBar = (props) => {
                     <a className="HeaderClose" onClick={() => { expansion.current.style.width = "0%" }}>&times;</a>
                     <div className="overlay-content">
                         {hdrValues.map((value) => (
-                            <Link key={Math.random()} to={"/" + value.value}>
+                            <Link key={Math.random()}to={{
+                                pathname: "home",
+                                hash: value.value,
+                                state: { fromDashboard: true }
+                            }}>
                                 <a
                                     onClick={() => (document.body.scrollTop = 0,
                                         document.documentElement.scrollTop = 0,
@@ -69,6 +73,10 @@ const NavBar = (props) => {
                                 </a>
                             </Link>
                         ))}
+                        <a href={"/ourstory"}
+                    >
+                        Our Story
+                        </a>
                     </div>
                 </div>
             </div>
@@ -95,13 +103,11 @@ const NavBar = (props) => {
                                 hash: value.value,
                                 state: { fromDashboard: true }
                             }}
-                            onClick={() => { console.log("peen") }}
                             value={value.value}>
                             {value.text}
                         </Link>
                     ))}
                     <a href={"/ourstory"}
-                        onClick={() => { console.log("peen") }}
                     >
                         Our Story
                         </a>

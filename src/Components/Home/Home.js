@@ -34,6 +34,11 @@ import Ring_rail from './Images/Ring_rail.jpg'
 
 
 const Home = (props) => {
+    const [nameState, setNameState] = useState("")
+    const emailValidation = /\S+@\S+\.\S+/;
+    const [emailState, setEmailState] = useState("")
+    const [isGoing, setIsgoing] = useState(true)
+
     const getWidth = () => window.innerWidth
         || document.documentElement.clientWidth
         || document.body.clientWidth;
@@ -68,26 +73,34 @@ const Home = (props) => {
         const tl2 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".topSectionOutside",
-                toggleActions:"restart",
+                toggleActions: "restart",
                 endTrigger: ".topSectionOutside",
                 start: "top -10%",
                 end: "bottom 50%",
                 //markers: true
             }
         });
-        tl2.fromTo("#topSectionBottomBar",1.5, { x:"-100%", ease: "none" },{ x:"100%", ease: "none" }, 0)
-        tl2.fromTo("#topSectionBottomBar1",1.5, { x:"-130%", ease: "none" },{ x:"100%", ease: "none" }, 0)
-        tl2.fromTo("#topSectionBottomBar2",1.5,{ x:"-160%", ease: "none" },{ x:"100%", ease: "none" }, 0)
+        tl2.fromTo("#topSectionBottomBar", 1.5, { x: "-100%", ease: "none" }, { x: "100%", ease: "none" }, 0)
+        tl2.fromTo("#topSectionBottomBar1", 1.5, { x: "-130%", ease: "none" }, { x: "100%", ease: "none" }, 0)
+        tl2.fromTo("#topSectionBottomBar2", 1.5, { x: "-160%", ease: "none" }, { x: "100%", ease: "none" }, 0)
         // gsap.utils.toArray(".parallax").forEach(layer => {
         //     const depth = layer.dataset.depth;
         //     const movement = -(layer.offsetHeight *depth )
         //     tl.to(layer, { y: movement, ease: "none" }, 0)
         // });
+        // const tl1 = gsap.timeline({
+
+        // });
+
+        // tl1.from(".background1", .5, { x: "50%", opacity: "0" }, 0)
+        // tl1.from(".background2", .5, { x: "-50%", opacity: "0" }, 0)
+        // tl1.from("#topImage", .5, { rotationX: 90, opacity: "0" }, .5)
+        // tl1.from("#topText",1, { opacity: "0" }, .3)
     }
     const infoSectionAnimation = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
-                
+
                 trigger: ".infoGrid",
                 start: "top 75%",
                 //markers: true
@@ -102,13 +115,7 @@ const Home = (props) => {
         });
         tl.staggerFrom(layers, .7, { transform: "rotateY(90deg)" }, .3)
     }
-    useEffect(() => {
-        topSectionAnimation()
-        infoSectionAnimation()
-
-
-
-
+    const gallerySectionAnimation = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".GallerySectionOutside",
@@ -128,9 +135,27 @@ const Home = (props) => {
                 })
 
         }, 300);
+    }
 
+    const rsvpSectionAnimation = () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".RSVPSectionOutside",
+                toggleActions: "restart reset reverse reverse",
+                start: "top 25%",
+                markers: false
+            }
+        });
 
-
+        tl.from(".rsvpCircleLeft", 1, { rotationZ: -180, opacity: "0", transformOrigin: "left center" }, 0)
+        tl.from(".rsvpCircleLeft1", 1, { rotationZ: 180, opacity: "0", transformOrigin: "left center" }, .5)
+        tl.from(".rsvpCircleLeft2", 1, { rotationZ: -180, opacity: "0", transformOrigin: "left center" }, 1)
+    }
+    useEffect(() => {
+        topSectionAnimation()
+        infoSectionAnimation()
+        gallerySectionAnimation()
+        rsvpSectionAnimation()
     }, [])
 
 
@@ -162,9 +187,9 @@ const Home = (props) => {
                     </div>
 
                 </div>
-                <div className="bottomBar" id="topSectionBottomBar"/>
-                <div className="bottomBar p" id="topSectionBottomBar1"/>
-                <div className="bottomBar g" id="topSectionBottomBar2"/>
+                <div className="bottomBar" id="topSectionBottomBar" />
+                <div className="bottomBar p" id="topSectionBottomBar1" />
+                <div className="bottomBar g" id="topSectionBottomBar2" />
             </div>
             <div className="InfoSectionOutside">
                 <div className="InfoSectionWrapper" id="info">
@@ -177,7 +202,10 @@ const Home = (props) => {
                                             <h3>
                                                 Where:
                                 </h3>
-                                            <p>3309 Lonesome Pine Way Sevierville, TN 37862</p>
+                                            <p>Mountain Cabin
+                                                <span>3309 Lonesome Pine Way</span>
+                                                <span>Sevierville, TN 37862</span>
+                                            </p>
                                         </div>
 
                                     </div>
@@ -215,7 +243,7 @@ const Home = (props) => {
                                             <h3>
                                                 Wear:
                                 </h3>
-                                            <p>Semi-Formal + comfortable shoes</p>
+                                            <p>Semi-Formal  <span>+</span> <span>Comfortable Shoes</span></p>
                                         </div>
 
                                     </div>
@@ -236,7 +264,10 @@ const Home = (props) => {
                                             <h3>
                                                 Where:
                                 </h3>
-                                            <p>3309 Lonesome Pine Way Sevierville, TN 37862</p>
+                                            <p>Mountain Cabin
+                                                <span>3309 Lonesome Pine Way</span>
+                                                <span>Sevierville, TN 37862</span>
+                                            </p>
                                         </div>
 
                                     </div>
@@ -264,7 +295,7 @@ const Home = (props) => {
                                             <h3>
                                                 Wear:
                                 </h3>
-                                            <p>Semi-Formal + comfortable shoes</p>
+                                            <p>Semi-Formal  <span>+</span> <span>Comfortable Shoes</span></p>
                                         </div>
 
                                     </div>
@@ -275,6 +306,9 @@ const Home = (props) => {
                 </div>
             </div>
             <div className="RSVPSectionOutside" id="rsvp">
+                <div className="rsvpCircleLeft" id="rsvpCircleLeft" />
+                <div className="rsvpCircleLeft1" id="rsvpCircleLeft1" />
+                <div className="rsvpCircleLeft2" id="rsvpCircleLeft2" />
                 <div className="RSVPSectionWrapper">
                     <h3>
                         RSVP
@@ -282,9 +316,9 @@ const Home = (props) => {
                     <p>
                         Our wedding has a limited guest list due to our venue size and location.
 
-    Therefore, only RSVP yourself and those listed on your invitation.
+    <span>Therefore, please only RSVP yourself and those listed on your invitation.</span>
 
-    Thank you for understanding.
+                        <span>Thank you for understanding.</span>
                     </p>
                     <p style={{ textDecoration: "underline" }}>
 
@@ -292,19 +326,71 @@ const Home = (props) => {
                     </p>
 
                     <div className="RSVPcard">
-                        <input>
-                        </input>
-                        <input>
-                        </input>
-                        <button>
-                            Ye
-                    </button>
-                        <button>
-                            no
-                    </button>
-                        <textarea>
+                        <div style={{ justifySelf: "end" }}
+                            className=
+                            {(nameState !== "") ?
+                                "InputFieldWrapper" :
+                                "InputFieldWrapper InputFieldWrapperInvalid"}>
+                            <input
+                                type="text"
+                                className="ContactFormInput"
+                                value={nameState}
+                                onChange={(e) => {
+                                    setNameState(e.target.value)
+                                }}
+                                required
+                            >
+
+                            </input>
+                            <label>Name:</label>
+                        </div>
+
+                        <div style={{ justifySelf: "start" }}
+                            className=
+                            {emailValidation.test(String(emailState).toLowerCase()) ?
+                                "InputFieldWrapper" :
+                                "InputFieldWrapper InputFieldWrapperInvalid"}>
+                            <input
+                                type="text"
+                                className="ContactFormInput"
+                                value={emailState}
+                                onChange={(e) => {
+                                    setEmailState(e.target.value)
+                                }}
+                                required
+                            >
+
+                            </input>
+                            <label>Email:</label>
+                        </div>
+
+                        <p>Will you be able to attend on September the 18th?</p>
+
+                        <button style={{ justifySelf: "end" }} className={(!isGoing) ? "selected" : "notSelected"}
+                            onClick={() => { setIsgoing(!isGoing) }}
+                            disabled={!isGoing}
+                        >
+                            Yes
+                        </button>
+                        <button style={{ justifySelf: "start" }} className={(isGoing) ? "selected" : "notSelected"}
+                            onClick={() => { setIsgoing(!isGoing) }}
+                            disabled={isGoing}
+                        >
+                            No
+                        </button>
+                        <textarea
+                            placeholder="Add a Note (optional)">
 
                         </textarea>
+                        <button
+
+                            className="submitButton"
+                            disabled={!(
+                                (nameState !== "") &&
+                                (emailValidation.test(String(emailState).toLowerCase())))
+                            }>
+                            Send RSVP
+                        </button>
 
                     </div>
 

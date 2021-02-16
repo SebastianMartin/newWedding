@@ -1,6 +1,8 @@
 #hero {
-  height: 800px;
-  overflow: hidden;
+  height: 80vh;
+  min-height: 900px;
+  min-width: 1000px;
+  width: 90%;
   position: relative;
 }
 
@@ -13,6 +15,7 @@
 }
 
 .HomeContainer .topSectionOutside {
+  width: 100%;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,8 +30,7 @@
 }
 
 .HomeContainer .topSectionOutside .topSectionWrapper {
-  width: 100%;
-  max-width: 1600px;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,6 +94,18 @@
 }
 
 .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
   z-index: 2;
   position: absolute;
   width: 35%;
@@ -177,6 +191,13 @@
   padding-top: 60%;
   max-width: 100%;
   position: relative;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
 }
 
 .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec {
@@ -282,13 +303,27 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
+  height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper {
-  height: 60vh;
+  z-index: 2;
+  height: 100%;
   width: 80%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper h3 {
@@ -300,19 +335,325 @@
 
 .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper p {
   width: 90%;
-  padding-left: 10%;
   margin: 0;
   line-height: 2em;
   font-family: 'Montserrat', sans-serif;
 }
 
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper p span {
+  display: block;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard {
+  width: 70%;
+  min-width: 600px;
+  padding: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  justify-items: center;
+  border: solid 1px rgba(69, 41, 64, 0.8);
+  background-color: rgba(69, 41, 64, 0.2);
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard p {
+  margin: 0;
+  padding: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard input {
+  width: 100%;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard textarea {
+  border: none;
+  -webkit-box-shadow: 0 5px 5px rgba(69, 41, 64, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(69, 41, 64, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: white;
+  width: 80%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard textarea:focus {
+  outline: none;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard textarea::-webkit-input-placeholder {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard textarea:-ms-input-placeholder {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard textarea::-ms-input-placeholder {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard textarea::placeholder {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapper {
+  position: relative;
+  width: 100%;
+  text-align: start;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  border-bottom: solid green 2px;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapper .ContactFormInput {
+  background-color: white;
+  -webkit-box-shadow: 0 5px 5px rgba(69, 41, 64, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(69, 41, 64, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapper input {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapper input:focus {
+  outline: none;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapper input:focus ~ label,
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapper input:valid ~ label {
+  top: -32px;
+  text-decoration: underline;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapper label {
+  font-family: 'Montserrat', sans-serif;
+  z-index: 1;
+  position: absolute;
+  top: 5px;
+  font-size: 20px;
+  left: 10px;
+  bottom: 0;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  pointer-events: none;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapperInvalid {
+  border-bottom: solid red 2px;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard button {
+  padding: 5px;
+  border: solid rgba(69, 41, 64, 0.8) 2px;
+  width: 60%;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .selected {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: rgba(69, 41, 64, 0.8);
+  color: white;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .notSelected {
+  background-image: linear-gradient(45deg, var(--gold) 50%, var(--secondary) 50%);
+  background-size: 250% 100%;
+  background-position: right bottom;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .notSelected:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+  background-position: left top;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .submitButton {
+  width: 30%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  background-image: linear-gradient(45deg, #ab743b 50%, var(--secondary) 50%);
+  background-size: 250% 100%;
+  background-position: right bottom;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .submitButton:disabled {
+  background-color: rgba(69, 41, 64, 0.2);
+}
+
+.HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .submitButton:not(:disabled):hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+  background-position: left top;
+}
+
+.HomeContainer .RSVPSectionOutside .rsvpCircleLeft {
+  left: 0;
+  top: 10vh;
+  position: absolute;
+  border-radius: 0% 18vh 18vh 0%;
+  height: 36vh;
+  width: 18vh;
+  background-color: rgba(171, 116, 59, 0.5);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+.HomeContainer .RSVPSectionOutside .rsvpCircleLeft1 {
+  left: 0;
+  top: 33.5vh;
+  position: absolute;
+  border-radius: 0% 12.5vh 12.5vh 0%;
+  height: 25vh;
+  width: 12.5vh;
+  background-color: rgba(24, 86, 69, 0.5);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+.HomeContainer .RSVPSectionOutside .rsvpCircleLeft2 {
+  left: 0;
+  top: 51vh;
+  position: absolute;
+  border-radius: 0% 7.5vh 7.5vh 0%;
+  height: 15vh;
+  width: 7.5vh;
+  background-color: rgba(69, 41, 64, 0.5);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
 @media only screen and (max-width: 700px) {
-  .HomeContainer {
-    position: relative;
+  #hero {
+    height: 100vh;
+    min-height: 900px;
+    min-width: 00px;
     width: 100%;
-    min-height: 250vh;
-    background-color: rgba(69, 41, 64, 0.1);
-    overflow: hidden;
+    position: relative;
+  }
+  .HomeContainer .topSectionOutside {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper {
+    position: relative;
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .topSection {
+    z-index: 1;
+    margin-left: 0%;
+    position: absolute;
+    background-color: white;
+    width: 60;
+    height: 50%;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .background1 {
+    background-color: rgba(69, 41, 64, 0.7);
+    position: absolute;
+    margin-left: -4%;
+    margin-top: 4%;
+    width: 60%;
+    height: 50%;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .background2 {
+    background-color: rgba(24, 86, 69, 0.7);
+    position: absolute;
+    margin-left: 4%;
+    margin-top: -4%;
+    width: 60%;
+    height: 50%;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .imageWrapper {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    margin-left: 0%;
+    width: 50%;
+    height: auto;
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .imageWrapper .image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    display: -ms-grid;
+    display: grid;
+    z-index: 2;
+    position: absolute;
+    width: 35%;
+    height: 40%;
+    margin-left: 0%;
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper h2 {
+    padding: 0;
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper h1 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', sans-serif;
+  }
+  .HomeContainer .topSectionOutside .topSectionWrapper .textWrapper p {
+    font-family: 'Montserrat', sans-serif;
   }
   .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid {
     width: 80%;
@@ -328,11 +669,19 @@
             align-items: center;
   }
   .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper {
-    padding-top: 50%;
+    padding-top: 60%;
     max-width: 100%;
     position: relative;
   }
   .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec {
+    -ms-flex-line-pack: start;
+        align-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
     position: absolute;
     background-color: white;
     top: 0;
@@ -367,10 +716,63 @@
             align-items: center;
   }
   .HomeContainer .InfoSectionOutside .InfoSectionWrapper .infoGrid .gridSecWrapper .gridsec .infoCard .cardInfo h3 {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
     padding: 0;
     margin-bottom: 0;
     font-family: 'Playfair Display', sans-serif;
     border-bottom: 2px solid var(--gold);
+  }
+  .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper {
+    z-index: 2;
+    width: 90%;
+    min-width: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard {
+    width: 100%;
+    min-width: 0px;
+    padding: 30px 10px;
+    grid-row-gap: 2em;
+  }
+  .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard p {
+    margin: 0;
+    padding: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard input {
+    width: 100%;
+  }
+  .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard textarea {
+    border: none;
+    -webkit-box-shadow: 0 5px 5px rgba(69, 41, 64, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 5px rgba(69, 41, 64, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: white;
+    width: 80%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard textarea:focus {
+    outline: none;
+  }
+  .HomeContainer .RSVPSectionOutside .RSVPSectionWrapper .RSVPcard .InputFieldWrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
   }
 }
 /*# sourceMappingURL=Home.css.map */
