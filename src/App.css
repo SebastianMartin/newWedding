@@ -23,58 +23,163 @@
 }
 
 
-
-h1{
-  font-size: calc(25px + 2vw); 
-
-}
-h2{
-  font-size: calc(12px + 1.5vw);  
-  font-family: 'Montserrat', sans-serif;
-}
-h3 {
-  font-size: 50px;
-
-}
-h4{
-  font-size: calc(12px + 1vw);  
-}
-p{
-  font-size: calc(2px + 1.5vw);  
-  font-family: 'Montserrat', sans-serif;
-
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-
-
-
-/*tabler*/
-@media (min-width: 1800px) {
-
-  p{
-    font-size: 25px;  
-  
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+h2{
+  /* animation: slideInFromRight .75s ease-in; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 200%;
+  color: white;
+  text-align: center;
+
+}
+h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 350%;
+  color: var(--purple);
+  text-align: center;
+
+}
+h1{
+  animation: slideInFromRight .5s ease-in;
+  overflow: hidden;
+    font-family: 'Alex Brush', cursive;
+    font-size: 600%;
+    color:  White;
+}
+h4{
+  animation: slideInFromRight .5s ease-in;
+  overflow: hidden;
+    font-family: 'Alex Brush', cursive;
+    font-size: 300%;
+    color:  White;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 150%;
+  color: var(--purple);
+  text-align: center;
+}
+.TopBuffer{
+  min-height: 95px;
+  padding-top: 5%;
+}
+.RSVPButtons{
+  background-color: #452940;
+    border-color: #AB743B;
+    font-size: 200%;
+    color: white;
+    text-align: center;
+}
+.RSVPButtons:hover,.RSVPButtons:active, .RSVPButtons:focus {
+  color: #fff;
+  background-color: #561625;
+  border-color: black;;
+}
+
+
+
+
+
 /*tabler*/
 @media (max-width: 1200px) {
-
-
+  p{
+    font-size: 150%;
+  }
+  h3{
+    font-size: 300%;;
+  }
+  h2{
+    font-size: 150%;
+  }
+  h1{
+    font-size: 600%;
+  }
+  .RSVPButtons{
+    font-size: 220%;
+  }
 }
 
 /* Mobile */
-@media (max-width: 700px) {
-  h1{
-    font-size: 50px; 
-  
-  }
+@media (max-width: 500px) {
   p{
-    font-size: 15px;  
-  
+    font-size: 150%;
   }
-  
-
+  h3{
+    font-size: 300%;;
+  }
+  h2{
+    font-size: 150%;;
+  }
+  h1{
+    font-size: 400%;
+  }
+  .RSVPButtons{
+    font-size: 170%;
+  }
 }
 
 
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

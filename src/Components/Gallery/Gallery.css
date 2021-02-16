@@ -1,0 +1,212 @@
+.GalleryTopBuffer{
+    min-height: 95px;
+    padding-top: 5%;
+}
+.GalleryHome{
+    
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+.GalleryContainer{
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%);
+    height:100%;
+    max-width: 1200px;
+    width:auto;
+    /*background-color: var(--purple);*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.picture{
+    flex: 0 1 500px; /*  No stretching: */
+    padding: 5px;
+    border-bottom: solid var(--purple) 2px;
+}
+.pictureRow{
+    flex: 0 1 500px;
+    
+}
+
+.pictureLeft{
+    border-right: solid var(--purple) 2px;
+    border-bottom: solid var(--purple) 2px;
+    padding: 5px;
+}
+.GalleryPictures{
+    box-sizing: content-box;
+    width: 100%;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+.noBottomBorder{
+    border-bottom: none;
+}
+
+
+
+.CyclePage{
+    background-color: black;
+    height: 110vh;
+}
+.CyclePageX{
+    padding-top: 80px;
+    padding-bottom: 10px;
+    padding-left: 25px;;
+    width: 35px;
+}
+
+.CyclePageXIcon{
+    filter: grayscale(1) invert(1);
+    width: 45px;
+}
+.CyclePageMain{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    width: 100%;
+    height:80%;
+    
+    
+}
+.CyclePageMain p{
+    color:whitesmoke
+}
+.CyclePageMainLeftArrow{
+    grid-column: 1 / 2;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.CyclePageMainImage{
+
+    padding-right: 10px;
+
+    padding-left: 10px;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CyclePageMainRightArrow{
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-right {
+    padding-right: 10px;
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    
+    border-left: 60px solid var(--purple);
+    cursor: pointer;
+  }
+  .arrow-left {
+    padding-left: 10px;
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    
+    border-right: 60px solid var(--purple);
+    cursor: pointer;
+  }
+
+.CyclePictures{
+    box-sizing: content-box;
+    max-height: 80vh;
+    max-width: 80%;;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .picture{
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+    }
+    .pictureLeft{
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+    }
+    .CyclePictures{
+        box-sizing: content-box;
+        max-height: none;
+        max-width: 100%;;
+        border-radius: 10px;
+        border-radius: 10px;
+    }
+    .CyclePageX{
+        padding-top: 65px;
+        padding-bottom: 0px;
+        padding-left: 15px;;
+        width: 35px;
+    }
+    .CyclePageXIcon{
+        filter: grayscale(1) invert(1);
+        width: 25px;
+    }
+    .arrow-right {
+        padding-right: 0px;
+        width: 0; 
+        height: 0; 
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        
+        border-left: 30px solid var(--purple);
+      }
+      .arrow-left {
+        padding-left: 0px;
+        width: 0; 
+        height: 0; 
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        
+        border-right: 30px solid var(--purple);
+      }
+    
+}

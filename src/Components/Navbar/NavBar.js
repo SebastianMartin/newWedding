@@ -29,16 +29,20 @@ const NavBar = (props) => {
         },
 
         {
-            value: "info",
-            text: "Information"
-        },
-        {
             value: "rsvp",
             text: "RSVP"
         },
         {
+            value: "schedule",
+            text: "Schedule"
+        },
+        {
             value: "gallery",
             text: "Gallery"
+        },
+        {
+            value: "gallery",
+            text: "Registry"
         },
     ]
 
@@ -48,7 +52,7 @@ const NavBar = (props) => {
             <div className="HeaderSmallContainer">
                 <span className="HeaderOpen" onClick={() => { expansion.current.style.width = "100%" }}>&#9776;</span>
                 <Link className="HeaderTitle" to={"/home"} style={{ textDecoration: "none" }}>
-                    <div className="HeaderTitleContainer">
+                    <div  className="HeaderTitleContainer">
 
                         <h2>
                             Sebastian + Gabrielle
@@ -59,11 +63,7 @@ const NavBar = (props) => {
                     <a className="HeaderClose" onClick={() => { expansion.current.style.width = "0%" }}>&times;</a>
                     <div className="overlay-content">
                         {hdrValues.map((value) => (
-                            <Link key={Math.random()}to={{
-                                pathname: "home",
-                                hash: value.value,
-                                state: { fromDashboard: true }
-                            }}>
+                            <Link key={Math.random()} to={"/" + value.value}>
                                 <a
                                     onClick={() => (document.body.scrollTop = 0,
                                         document.documentElement.scrollTop = 0,
@@ -73,10 +73,6 @@ const NavBar = (props) => {
                                 </a>
                             </Link>
                         ))}
-                        <a href={"/ourstory"}
-                    >
-                        Our Story
-                        </a>
                     </div>
                 </div>
             </div>
@@ -97,20 +93,12 @@ const NavBar = (props) => {
                 </Link>
                 <div className="NavBarButtons">
                     {hdrValues.map((value) => (
-                        <Link
-                            to={{
-                                pathname: "home",
-                                hash: value.value,
-                                state: { fromDashboard: true }
-                            }}
+                        <a href={"/" + value.value}
+                            onClick={() => { console.log("peen") }}
                             value={value.value}>
                             {value.text}
-                        </Link>
-                    ))}
-                    <a href={"/ourstory"}
-                    >
-                        Our Story
                         </a>
+                    ))}
                 </div>
                 <div className="NavBarExtender">
 

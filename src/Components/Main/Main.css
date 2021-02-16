@@ -1,0 +1,179 @@
+.MainContainer{
+    width: 100%;
+    height: 100%;
+   background-origin: border-box;
+    background-image: url("../../Images/eng1_retrofilt.jpg");
+
+    background-attachment: fixed;
+    background-size: 100% ;
+}
+.topBufferZone{
+    height: 25vh;
+    min-height: 900px;
+}
+
+.MainContainerTopText{
+    
+    float:right;
+    text-align: center;
+    width: 50%;
+    position: relative;
+    margin-top: 10%;
+    right: 0%;
+}
+.MainContainerTopTextButton{
+    width:100%
+}
+.MainContainerTopTextOurWedding{
+    white-space: nowrap;
+    overflow: visible;
+    font-family: 'Alex Brush', cursive;
+    font-size: 800%;
+    color: white;
+    text-align: center;
+}
+.MainContainerTopTextDate{
+    margin-top: -3%;
+    font-family: 'Alex Brush', cursive;
+    font-size: 250%;
+    color: white;
+    text-align: center;
+}
+.MainMountainCelebrationDesc{
+    width:80%;
+    margin-left: 10%;
+}
+
+.MainContainerInfo{
+    width: 100%;
+    background-color: whitesmoke;
+}
+.MainContainerInfoPart{
+    margin: auto;
+    max-width: 1800px;
+    padding-top: 4%;
+    text-align: center;
+    width: 100%;
+  background-color: whitesmoke;
+}
+.ComeCelebrateWithUsTopText{
+    padding-top: 5%;
+    overflow: hidden;
+    font-family: "Lucida Console", monospace;
+    font-size: 350%;
+    color: white;
+}
+.ComeCelebrateWithUsParagraph{
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow: hidden;
+    font-family: "Lucida Console", monospace;
+    font-size: 200%;
+    color: white;
+    padding-Bottom: 5%;
+}
+.ComeCelebrateWithUsImage{
+
+        width: 80%;
+        max-width:1200px;
+        border-radius: 10px;
+        height: auto;
+        width: auto\9;
+    
+}
+.MainContainerLocationPart{
+    padding-top: 2%;
+    text-align: center;
+    margin:auto;
+    width: 70%;
+    max-width: 1100px;
+    position: relative;
+  background-color: var(--purple);
+  border-radius: 0px 0px 10px 10px;
+}
+.MainContainerLocationPart h3{
+ color: white;
+}
+.MainContainerLocationPart p{
+    color: white;
+   }
+.MainContainerLocationPartContainer{
+    margin:auto;
+    width: 80%;
+}
+.MainContainerLocationPartContainer p{
+    font-weight: 200;
+}
+.GoogleMap{
+    height:100%;
+    padding-bottom: 10%;
+}
+.MainCompRSVP{
+    padding-top: 5%;
+    background-color: whitesmoke ;
+    padding-bottom: 5%;
+}
+.MainCompRegistry{
+    padding-top: 5%;
+    background-color: var(--purple) ;
+    padding-bottom: 5%;
+}
+.MainCompRegistry h3{
+    color:white;
+}
+.MainCompAmazonImage{
+    filter: hue-rotate(280deg);
+}
+.MainCompTreeImage{
+    padding-top: 2%;
+    height:180px;
+}
+.lineBottom{
+    border-bottom: 2px solid var(--gold);
+}
+.MainContainerLocationPartContainer h3, .MainCompRSVP h3{
+    transform: scale(.8);;
+}
+
+@media (max-width: 1200px) {
+    .topBufferZone{
+        height: 30vh;
+        min-height: 440px;
+        max-height: 650px;
+    }
+    .MainContainerTopText{
+        float:right;
+        width: 50%;
+        margin-top: 8%;
+    }
+    
+  }
+  
+  /* Mobile */
+  @media (max-width: 500px) {
+      .MainCompTreeImage{
+          height: 0;
+      }
+    .topBufferZone{
+        height: 30vh;
+        min-height: 160px;
+        max-height: 200px;
+    }
+    .MainContainerTopText{
+        float:right;
+        width: 100%;
+        margin-top: 200px;
+    }
+    .MainContainerLocationPart{
+        margin:0%;
+        width: 100%;;
+    }
+    .MainContainerTopText{
+        background-color:var(--purple);
+    }
+    .MainContainerTopTextButton{
+        width:100%;
+        padding-top: 2%;;
+    }
+  }

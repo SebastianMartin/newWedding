@@ -1,0 +1,136 @@
+.Accommodations{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 20%;;
+}
+.AccoCard{
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+.AccoCardMarginTop{
+    height: 100px;
+}
+.AccoCardMarginBottom{
+    height: 100px;
+}
+.AccoCardMargin{
+    height: 50px;
+}
+
+.AccoContainer{
+    margin: auto;
+    position: relative; 
+    height:100%;
+    max-width: 1200px;
+    width:auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.AccoContainerCard{
+    flex: 0 1 480px;
+    padding: 10px;
+}
+.AccoContainerCenter{
+    padding-top: 100%;
+    border: solid 2px var(--purple);
+}
+
+
+  
+
+
+
+.VendorCard{
+    height: 100%;
+    padding-bottom: 5%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 50px;;
+}
+.VendorCard p{
+    text-decoration: underline;
+}
+.VendorCardButton{
+    background-color: whitesmoke ;
+    outline:none;
+    padding: 1%;
+    padding-left: 2%;
+    border-radius: 10px;
+    text-align: left;
+    overflow: visible;
+    border: solid var(--purple) 1px;
+    height: 100%;
+    font-size: 160%;
+    color: var(--blue);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.VendorCard a{
+    padding:5%;
+    height: 100%;
+    color: var(--purple);
+    text-decoration: none;
+}
+.VendorCardName{
+    width:50%;
+}
+.VendorCardContainerCard p{
+    font-size: 180%;
+    text-decoration: none;
+}
+
+.VendorCardContainer{
+    position: relative; 
+    height:100%;
+    max-width: 440px;
+    width:auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+}
+.VendorCardContainerCard{
+    flex: 0 1 200px;
+    
+}
+   
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .AccoContainerCenter{
+        visibility: hidden;
+    }
+    .AccoCardMarginTop{
+        height: 0px;
+    }
+    .AccoCardMargin{
+        height: 20px;
+    }
+    .AccoCardMarginBottom{
+        height: 0px;
+    }
+
+    .VendorCard{
+        margin-bottom: 20px;
+    }
+    
+}

@@ -1,0 +1,57 @@
+.Schedule{
+    width: 100%;
+    height: 100%;
+}
+.ScheduleSchedule{
+    height:100%;
+    background-color: whitesmoke ;
+}
+.ScheduleMainContainer{
+    align-items: center;
+    text-align: center;
+    width:100%;
+    margin:0;
+}
+.ScheduleContainer{
+    align-items: center;
+    text-align: center;
+    width:100%;
+    margin:0;
+    
+    
+}
+
+.ScheduleContainer h2{
+    color: var(--purple);
+    animation: none;
+}
+.ScheduleContainerMain{
+    max-width: 1800px;
+    width:100%;
+}
+.SheduleEngagementPic{
+    width: 100%;
+    margin-bottom: 6%;
+}
+
+
+
+
+
+
+
+.blueLine2{
+       border:2px solid var(--purple);
+}
+
+.BlueLineThin2{
+    border: 1px solid var(--purple);
+}
+
+
+@media (max-width: 1200px) {
+  }
+  
+  /* Mobile */
+  @media (max-width: 500px) {
+  }

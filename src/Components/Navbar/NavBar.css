@@ -1,6 +1,5 @@
 .NavBarContainer {
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
     background: linear-gradient(to top,  rgba(255,255,255,0) 0%, var(--secondary)) no-repeat top center;
     
     width: 100%;
@@ -16,7 +15,7 @@
     padding-left: 2%;
   }
   .NavBarExtender{
-    height: 0px;;
+    height: 30px;;
   }
   
   .NavBarBackground {
@@ -68,18 +67,18 @@
     display: flex;
     justify-items: center;
     align-items: center;
-    position: fixed;
     z-index: 100;
-    background: linear-gradient(to top,  rgba(255,255,255,0) 0%, var(--secondary)) no-repeat top center;
-
+    background-color: var(--primary);
+    position: -webkit-sticky;
+    position: sticky;
     top:0px;
-    color: var(--purple);
+    border-bottom: solid white 2px;
 
 }
 .HeaderTitle{
   display: grid;
     width:100%;
-    color: var(--purple);
+    color: var(--fontOne);
     font-size: 20px;
     
 }
@@ -133,7 +132,7 @@
   }
   
   .overlay a:hover, .overlay a:focus {
-    color: var(--purple);
+    color: #f1f1f1;
   }
   
   .overlay .HeaderClose {
@@ -143,7 +142,7 @@
     font-size: 60px;
   }
   .HeaderOpen{
-    color: var(--purple);
+    color:white;
       width:60px;
     font-size: 40px;
     align-self:center;

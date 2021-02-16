@@ -1,0 +1,173 @@
+
+*:focus {
+    outline: 0 !important;
+}
+
+.RSVP h3{
+    color:var(--purple);
+}
+.RSVP p{
+    color: var(--purple);
+}
+
+.RSVP{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke ;
+    padding-bottom: 50%;
+    text-align: center;
+}
+
+.RSVPFormPara{
+    width:80%;
+    margin: auto;
+}
+
+.RSVPFlexContainer{
+    text-align: center;
+    width:80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 20px;
+    border-radius: 10px;
+    position: relative; 
+    margin: auto;
+    
+    
+}
+.RSVPFlexRow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.RSVPFlexCol{
+    width:100%;
+    flex: 0 1 500px; /*  No stretching: */
+    margin: 5px;
+}
+.RSVPFlexCol button{
+
+    width:100%;
+    height: 100%;
+    max-width: 500px;
+}
+.RSVPFlexCol2{
+    width:100%;
+    flex: 0 1 500px; /*  No stretching: */
+    margin: 5px;
+    height:200px;
+}
+.RSVPInputBox{
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    border:0;
+    
+    border-radius: 8px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--blue);
+    background-color: white ;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    font-size: 150%;
+
+}
+.errorBox{
+   
+    box-shadow: 0 3px 10px rgba(216, 13, 13, 1);
+}
+button{
+    background-color: whitesmoke ;
+    outline:none;
+    padding: 1%;
+    padding-left: 2%;
+    border-radius: 10px;
+    text-align: left;
+    overflow: visible;
+    
+    height: 100%;
+    font-size: 160%;
+    color: var(--blue);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+textarea{
+    height:100%;
+}
+.extraButton{
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+.buttonSelected{
+    color:whitesmoke;
+    width:100%;
+    background-color: var(--purple);
+}
+.underline{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.RSVPIcons{
+    height:25px;
+    padding-right: 1%;
+}
+@media (max-width: 1200px) {
+    .RSVPInputBox{
+        font-size: 120%;
+              }
+    .RSVPContainer{
+        animation: slideInFromBottom .6s ease-in;
+    }
+    .RSVPComingButton{
+        font-size: 120%;
+    }
+    .RSVPComingButtonSelected{
+        font-size: 120%;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 500px) {
+      .RSVPInputBox{
+font-size: 100%;
+      }
+    .RSVPComingButton{
+        font-size: 100%;
+    }
+    .RSVPComingButtonSelected{
+        font-size: 100%;
+    }
+  }
+
+  

@@ -1,0 +1,33 @@
+.Guests{
+    width: 100%;
+    height: 100%;
+    background-image: url("./../../Images/EngagementPic3.jpg");
+
+    background-attachment: fixed;
+    background-size: 100% ;
+}
+.GuestsTopText{
+    text-align: center;
+    width: 100%;
+    position: relative;
+  top: 15vh;
+}
+.GuestsTopTextWords{
+    overflow: hidden;
+    font-family: 'Alex Brush', cursive;
+    font-size: 800%;
+    color:  White;
+}
+.GuestsMainSection{
+    margin-top: 35vh;
+    padding-top: 5%;
+    padding-bottom: 50%;
+    height:100%;
+    background-color: #AB743B ;
+}
+.GuestsMainSectionHeader{
+    font-family: 'Alex Brush', cursive;
+    text-align: center;
+    font-size: 700%;
+    color: #561625;
+}
