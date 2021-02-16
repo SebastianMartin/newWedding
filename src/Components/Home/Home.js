@@ -29,6 +29,9 @@ import Holding_me from './Images/Holding_me.jpg'
 import spin from './Images/spin.jpg'
 import Ring_rail from './Images/Ring_rail.jpg'
 
+import amazon from './Logos/Amazon-Logo.png'
+import artmill from './Logos/artmill.png'
+import paypal from './Logos/paypal.png'
 
 
 
@@ -116,25 +119,28 @@ const Home = (props) => {
         tl.staggerFrom(layers, .7, { transform: "rotateY(90deg)" }, .3)
     }
     const gallerySectionAnimation = () => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".GallerySectionOutside",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1,
-                //markers: true,
-                pin: ".GallerySectionWrapper"
-            }
-        });
-        setTimeout(function () {
-            tl.to(".GallerySectionWrapper",
-                {
-                    x: -1 * (document.querySelector(".GallerySectionWrapper").scrollWidth
-                        -
-                        document.querySelector(".galleryGridWrapper").offsetWidth)
-                })
-
-        }, 300);
+        if(!isMobile){
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".GallerySectionOutside",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    //markers: true,
+                    pin: ".GallerySectionWrapper"
+                }
+            });
+            setTimeout(function () {
+                tl.to(".GallerySectionWrapper",
+                    {
+                        x: -1 * (document.querySelector(".GallerySectionWrapper").scrollWidth
+                            -
+                            document.querySelector(".galleryGridWrapper").offsetWidth)
+                    })
+    
+            }, 300);
+        }
+        
     }
 
     const rsvpSectionAnimation = () => {
@@ -149,13 +155,50 @@ const Home = (props) => {
 
         tl.from(".rsvpCircleLeft", 1, { rotationZ: -180, opacity: "0", transformOrigin: "left center" }, 0)
         tl.from(".rsvpCircleLeft1", 1, { rotationZ: 180, opacity: "0", transformOrigin: "left center" }, .5)
-        tl.from(".rsvpCircleLeft2", 1, { rotationZ: -180, opacity: "0", transformOrigin: "left center" }, 1)
+    }
+    const registryAnimation = () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+
+                trigger: ".regGrid",
+                start: "top 75%",
+                //markers: true
+            }
+        });
+
+        let layers = []
+        gsap.utils.toArray(".gridsecReg").forEach(layer => {
+            layers.push(layer)
+
+            //tl.from(layer, {  }, 0)
+        });
+        tl.staggerFrom(layers, .7, { transform: "rotateY(90deg)" }, .3)
+
+
+
+
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+
+                trigger: ".regGrid",
+                start: "top 75%"
+                //markers: true
+            }
+        });
+        let layers2 = []
+        gsap.utils.toArray(".triangle").forEach(layer => {
+            layers2.push(layer)
+
+            //tl.from(layer, {  }, 0)
+        });
+        tl.staggerFrom(layers2, .8, { opacity:"0",scale:0}, .4)
     }
     useEffect(() => {
         topSectionAnimation()
         infoSectionAnimation()
         gallerySectionAnimation()
         rsvpSectionAnimation()
+        registryAnimation()
     }, [])
 
 
@@ -308,7 +351,6 @@ const Home = (props) => {
             <div className="RSVPSectionOutside" id="rsvp">
                 <div className="rsvpCircleLeft" id="rsvpCircleLeft" />
                 <div className="rsvpCircleLeft1" id="rsvpCircleLeft1" />
-                <div className="rsvpCircleLeft2" id="rsvpCircleLeft2" />
                 <div className="RSVPSectionWrapper">
                     <h3>
                         RSVP
@@ -399,9 +441,76 @@ const Home = (props) => {
 
 
             </div>
-            <div className="GallerySectionOutside" id="gallery">
+            <div className="RegSectionOutside" id="registry">
+                <div className="RegTriangle1 triangle" />
+                <div className="RegTriangle2  triangle" />
+                <div className="RegTriangle3  triangle" />
+                <div className="RegSectionWrapper">
+                    <h3>
+                        Registry
+                    </h3>
+                    <div className="regGrid">
+                        <div className="gridSecWrapper">
+                            <div className="gridsecReg">
+                                <div className="infoCard">
+                                    <div className="cardInfo">
+                                        <div className="regImageWrapper">
+                                            <a target="_blank"
+                                                rel="noopener noreferrer"
+                                                href="https://www.amazon.com/wedding/share/GabbySebastianM">
+                                                <img className="regImage" src={amazon}></img>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="gridSecWrapper">
+                            <div className="gridsecReg">
+                                <div className="infoCard">
+                                    <div className="cardInfo">
+                                        <div className="regImageWrapper">
+                                            <a target="_blank"
+                                                rel="noopener noreferrer"
+                                                href="https://paypal.me/SebastianAndGabby?locale.x=en_US">
+                                                <img className="regImage" src={paypal}></img>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="gridSecWrapper">
+                            <div className="gridsecReg">
+                                <div className="infoCard">
+                                    <div className="cardInfo">
+                                        <div className="regImageWrapper">
+                                            <a key={Math.random()}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href="https://www.artmill.com/gift-cards/">
+                                                <img className="regImage" src={artmill}></img>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div className="GallerySectionOutside" id="gallery"
+            style = {(isMobile)?{height:"100vh"}:{}}>
                 <div className="galleryGridWrapper" >
-                    <div className="GallerySectionWrapper gallery" >
+                    <div className="GallerySectionWrapper gallery" 
+                    style = {(isMobile)?{overflow:"scroll"}:{}}>
 
 
 

@@ -37,6 +37,7 @@ h3 {
 
 }
 h4{
+  font-size: calc(12px + 1vw);  
 }
 p{
   font-size: calc(2px + 1.5vw);  
